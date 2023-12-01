@@ -1,0 +1,25 @@
+{
+  "name": "aoc_day_1_trebuchet",
+  "version": "1.0.0",
+  "description": "Advent of Code: Day 1",
+  "main": "calibration_checker.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mickfay/AOC_Day_1_Trebuchet.git"
+  },
+  "keywords": [
+    "AOC"
+  ],
+  "author": "mickfay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mickfay/AOC_Day_1_Trebuchet/issues"
+  },
+  "homepage": "https://github.com/mickfay/AOC_Day_1_Trebuchet#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
