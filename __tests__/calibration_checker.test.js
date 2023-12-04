@@ -1,4 +1,4 @@
-const {calibrationChecker } = require('../calibration_checker')
+const {calibrationChecker } = require('../src/1_calibration_checker')
 
 describe('calibrationChecker', () => {
 test('Returns 2 digit number when passed a string containing 2 numbers', () => {
