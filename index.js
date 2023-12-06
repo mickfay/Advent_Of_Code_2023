@@ -33,6 +33,6 @@ const stringToDecode5 = readFileSync(
 // console.log(calibrationChecker(stringToDecode1));
 // console.log(cubeGame(stringToDecode2, 12, 13, 14))
 // console.log(gearRatios(stringToDecode3))
-// console.log(scratchCardCheckerVersionDos(stringToDecode4));
+console.log(scratchCardCheckerVersionDos(stringToDecode4));
 // console.log(convertAllSeeds(stringToDecode5));
-console.log(checkEachLine(stringToDecode1));
+// console.log(checkEachLine(stringToDecode1));

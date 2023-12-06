@@ -40,7 +40,7 @@ describe("seedLocation", () => {
 });
 
 describe("convertAllSeeds", () => {
-  test("Function sohould convert an array of one pair of seed numbers correctly", () => {
+  test("Function should convert an array of one pair of seed numbers correctly", () => {
     const filepath = `${__dirname}/../input_files/test_5.txt`;
     const result = convertAllSeeds(stringToDecode);
     expect(result).toBe(18);
