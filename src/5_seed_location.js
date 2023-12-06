@@ -28,10 +28,19 @@ function seedLocation(num, almanac, level) {
 function convertAllSeeds(stringToDecode){
   const seeds = stringToDecode.split("\n\n")[0].split(/\s/).slice(1).map(x=>Number(x));
   const newSeeds = convertPairsToRange(seeds)
-  const locationNumbers = newSeeds.map(seed => {
-    return seedLocation(seed, stringToDecode, 1)
-  })
-  const lowestLocation = locationNumbers.sort((a, b) => a - b)[0]
+const firstSeed = seedLocation(newSeeds[0], stringToDecode, 1)
+console.log(firstSeed)
+const lowestLocation = newSeeds.reduce((lowest, seed) => {
+    const testLocation = seedLocation(seed, stringToDecode, 1)
+    if (testLocation < lowest){
+        console.log(testLocation, 'new low')
+        return testLocation
+    }
+    if(testLocation % 4000 === 0){
+        console.log(testLocation)
+    }
+    return lowest
+}, firstSeed)
   return lowestLocation
 }
 
