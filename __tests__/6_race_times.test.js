@@ -51,5 +51,14 @@ describe("calculateMarginOfError", () => {
     expect(result).toBe(2065338);
   });
 
+    test("With production data - TASK 2", () => {
+      const input = readFileSync(
+        `${__dirname}/../input_files/AOC_Day_6.txt`,
+        "UTF-8"
+      );
+      const result = calculateMarginOfError(input, 2);
+      expect(result).toBe(34934171);
+    });
+
 });
 

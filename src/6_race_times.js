@@ -13,11 +13,16 @@ function calculateRaceTime(time, distance) {
   return result
 }
 
-function extractTimeDistancePairs(inputStr) {
+function extractTimeDistancePairs(inputStr, part = 1) {
   const lines = inputStr.split("\n");
   console.log(lines);
   const timesArr = lines.map((line) => {
-    return line.match(/\d+/g);
+    if (part === 1){
+        return line.match(/\d+/g);
+    }
+    else {
+              return [line.match(/\d+/g).join('')]
+    }
   });
   const zippedTimes = timesArr[0].map((time, index) => {
     return [+time, +timesArr[1][index]];
@@ -25,8 +30,8 @@ function extractTimeDistancePairs(inputStr) {
   return zippedTimes;
 }
 
-function calculateMarginOfError(inputStr) {
-  const dataPairs = extractTimeDistancePairs(inputStr);
+function calculateMarginOfError(inputStr, num) {
+  const dataPairs = extractTimeDistancePairs(inputStr, num);
   console.log(dataPairs);
   const result = dataPairs.reduce((product, dataPair) => {
     const noOfResults = calculateRaceTime(...dataPair);
