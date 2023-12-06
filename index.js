@@ -1,5 +1,8 @@
 const { readFileSync } = require("fs");
-const { calibrationChecker } = require("./src/1_calibration_checker");
+const {
+  calibrationChecker,
+  checkEachLine,
+} = require("./src/1_calibration_checker");
 const { cubeGame } = require("./src/2_cube_game");
 const { gearRatios } = require("./src/3_gear_ratios");
 const {
@@ -23,9 +26,13 @@ const stringToDecode4 = readFileSync(
   `${__dirname}/input_files/AOC_Day_4.txt`,
   "UTF-8"
 );
-const stringToDecode5 = readFileSync(`${__dirname}/input_files/AOC_Day_5.txt`, 'utf-8');
+const stringToDecode5 = readFileSync(
+  `${__dirname}/input_files/AOC_Day_5.txt`,
+  "utf-8"
+);
 // console.log(calibrationChecker(stringToDecode1));
 // console.log(cubeGame(stringToDecode2, 12, 13, 14))
 // console.log(gearRatios(stringToDecode3))
 // console.log(scratchCardCheckerVersionDos(stringToDecode4));
-console.log(convertAllSeeds(stringToDecode5));
+// console.log(convertAllSeeds(stringToDecode5));
+console.log(checkEachLine(stringToDecode1));
